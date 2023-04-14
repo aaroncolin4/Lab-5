@@ -8,7 +8,7 @@ Description: This file implements a 1ms Timer1
 */
 
 /*
-    TCCR1B - Timer/Counter 1 Control Register A (Pg.154)
+    TCCR1A - Timer/Counter 1 Control Register A (Pg.154)
               _______________________________________________________________
     Bit      |   7   |   6   |   5   |   4   |   3   |   2   |   1   |   0   |
              |-------+-------+-------+-------+-------+-------+-------+-------|
@@ -22,7 +22,7 @@ Description: This file implements a 1ms Timer1
               _____________________________________________________________
     Bit      |   7   |   6   |   5   |   4   |   3   |   2  |   1  |   0   |
              |-------+-------+-------+-------+-------+------+------+-------|
-    (0x81)   | ICNC1 | ICNC1 |   -   | WGM13 | WGM13 | CS12 | CS11 | CS10  |
+    (0x81)   | ICNC1 | ICNC1 |   -   | WGM13 | WGM12 | CS12 | CS11 | CS10  |
              |-------+-------+-------+-------+-------+------+------+-------|
     R/W      |  R/W  |  R/W  |   R   |  R/W  |  R/W  |  R/W |  R/W |  R/W  |
     Init Val |   0   |   0   |   0   |   0   |   0   |   0  |  0   |   0   |
@@ -36,7 +36,7 @@ Description: This file implements a 1ms Timer1
 
     Initial Value
     Setting timer 1 in CTC mode 
-    (Mode 4 see table 17-2)
+    (Mode 4 see table 17-2) 
     WGMnx bits need to be specified
     Mode | WGM13 | WGM12 | WGM11 | WGM10 |
       4  |   0   |   1   |   0   |   0   | 
