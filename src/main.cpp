@@ -10,17 +10,12 @@ Assignment:  Lab 5
 #include "switch.h"
 
 
-
-/*
- * Define a set of states that can be used in the state machine using an enum.
- */
-
+// Define a set of states that can be used in the state machine using an enum.
 typedef enum stateType{
   wait_press, debounce_press, wait_release, debounce_release 
 } stateType;
 
-// Initialize states.  Remember to use volatile 
-//prevents information from being changed by the compiler
+// Initialize states.  Remember to use "volatile" 
 volatile stateType buttonState = wait_press;
 
 
@@ -33,7 +28,7 @@ int main() {
 
   while(1){
 
-     switch(buttonState){
+    switch(buttonState){
       case wait_press:
         break;
       case debounce_press:
@@ -45,7 +40,7 @@ int main() {
       case debounce_release:
         delay_ms(1);
         buttonState = wait_press;
-      break;
+        break;
     }
   }
 
