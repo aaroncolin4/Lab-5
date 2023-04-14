@@ -90,4 +90,7 @@ void initPWM() {
     OCR3A =  500;
 }
 
+void buzzer_ON(){
 
+    
+}
