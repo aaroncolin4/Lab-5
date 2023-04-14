@@ -67,7 +67,7 @@ void initTimer1(){
     TCCR1A &= ~(1 << WGM10);
 }
 
-void delay_1ms(unsigned int delay){
+void delay_ms(unsigned int delay){
 
     TCNT1 = 0;               // Set the Timer/Counter-Register-1 to zero (0)
     OCR1A = 62 * delay;      // Set the Output-Compare-Register-1A to desired delay
