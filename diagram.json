@@ -1,0 +1,52 @@
+{
+    "version": 1,
+    "author": "Aaron Colin",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-breadboard", "id": "bb1", "top": -147, "left": -112.4, "attrs": {} },
+      { "type": "wokwi-arduino-mega", "id": "mega", "top": 115.8, "left": -13.2, "attrs": {} },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": -67.8,
+        "left": -73.8,
+        "rotate": 90,
+        "attrs": { "color": "green" }
+      },
+      {
+        "type": "wokwi-mpu6050",
+        "id": "imu1",
+        "top": -91.02,
+        "left": 174.88,
+        "rotate": 180,
+        "attrs": {}
+      },
+      { "type": "wokwi-buzzer", "id": "bz1", "top": 2.4, "left": 693, "attrs": { "volume": "0.1" } }
+    ],
+    "connections": [
+      [ "mega:GND.1", "bb1:bn.16", "black", [ "v0" ] ],
+      [ "bb1:7b.j", "mega:10", "green", [ "v82.56", "h168.76" ] ],
+      [ "bb1:bn.1", "bb1:7t.a", "black", [ "v0" ] ],
+      [ "mega:5V", "bb1:bp.41", "red", [ "v27.46", "h244.03", "v-4.6" ] ],
+      [ "mega:21", "bb1:31b.j", "limegreen", [ "v-39.72", "h-115.64" ] ],
+      [ "bb1:29b.j", "bb1:bp.23", "red", [ "v0" ] ],
+      [ "bb1:30b.j", "bb1:bn.24", "black", [ "v0" ] ],
+      [ "bb1:32b.j", "mega:20", "yellow", [ "v91.68", "h103.48" ] ],
+      [ "bb1:bn.28", "bb1:35b.j", "black", [ "v0" ] ],
+      [ "mega:2", "bz1:2", "red", [ "v-3.87", "h496.24" ] ],
+      [ "bz1:1", "bb1:bn.50", "green", [ "v12.42", "h-229.6" ] ],
+      [ "btn1:1.l", "bb1:7t.c", "", [ "$bb" ] ],
+      [ "btn1:2.l", "bb1:5t.c", "", [ "$bb" ] ],
+      [ "btn1:1.r", "bb1:7b.h", "", [ "$bb" ] ],
+      [ "btn1:2.r", "bb1:5b.h", "", [ "$bb" ] ],
+      [ "imu1:INT", "bb1:36b.f", "", [ "$bb" ] ],
+      [ "imu1:AD0", "bb1:35b.f", "", [ "$bb" ] ],
+      [ "imu1:XCL", "bb1:34b.f", "", [ "$bb" ] ],
+      [ "imu1:XDA", "bb1:33b.f", "", [ "$bb" ] ],
+      [ "imu1:SDA", "bb1:32b.f", "", [ "$bb" ] ],
+      [ "imu1:SCL", "bb1:31b.f", "", [ "$bb" ] ],
+      [ "imu1:GND", "bb1:30b.f", "", [ "$bb" ] ],
+      [ "imu1:VCC", "bb1:29b.f", "", [ "$bb" ] ]
+    ],
+    "dependencies": {}
+  }
