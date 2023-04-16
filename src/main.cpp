@@ -23,6 +23,7 @@ int main() {
 
   initTimer1();
   initSwitch();
+  sei();
 
   sei(); // Enable global interrupts.
 
@@ -47,22 +48,22 @@ int main() {
   return 0;
 }
 
-/* 
-Pin Change Interrupt which handles the switch being
-pressed and released. When the switch is pressed and 
-released, the Buzzer stops making chirping sound
-*/
-ISR(PCINT0_vect){
+// /* 
+// Pin Change Interrupt which handles the switch being
+// pressed and released. When the switch is pressed and 
+// released, the Buzzer stops making chirping sound
+// */
+// // ISR(PCINT0_vect){
   
-   //checks which state the state machine is in
-  switch(buttonState){
-    case wait_press:
-      buttonState = debounce_press;
-      break;
+// //    //checks which state the state machine is in
+// //   switch(buttonState){
+// //     case wait_press:
+// //       buttonState = debounce_press;
+// //       break;
   
-    case wait_release:
+// //     case wait_release:
       
-      break;
-  }
+// //       break;
+// //   }
   
-}
+// // }

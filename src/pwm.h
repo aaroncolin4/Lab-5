@@ -8,6 +8,7 @@ Assignment:  Lab 5
 #define PWM_H
 
     void initPWM(); 
-    void buzzer_ON();
+    void alarmON();
+    void alarmOFF();
 
 #endif
